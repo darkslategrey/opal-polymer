@@ -174,11 +174,17 @@ gulp.task('precache', function (callback) {
   });
 });
 
+gulp.task('haml', function () {
+  gulp.src('./app/index.haml')
+    .pipe($.haml())
+    .pipe(gulp.dest('./app'));
+});
+
 // Clean Output Directory
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 // Watch Files For Changes & Reload
-gulp.task('serve', ['styles', 'elements', 'images'], function () {
+gulp.task('serve', ['styles', 'copy', 'elements', 'images'], function () {
   browserSync({
     notify: false,
     logPrefix: 'PSK',
@@ -203,10 +209,11 @@ gulp.task('serve', ['styles', 'elements', 'images'], function () {
     }
   });
 
+    // gulp.watch(['app/**/*.haml'], ['haml', reload]);    
   gulp.watch(['app/**/*.html'], reload);
   gulp.watch(['app/styles/**/*.css'], ['styles', reload]);
   gulp.watch(['app/elements/**/*.css'], ['elements', reload]);
-  gulp.watch(['app/{scripts,elements}/**/*.js'], ['jshint']);
+    // gulp.watch(['app/{scripts,elements}/**/*.js'], ['jshint']);
   gulp.watch(['app/images/**/*'], reload);
 });
 
@@ -237,7 +244,8 @@ gulp.task('default', ['clean'], function (cb) {
   runSequence(
     ['copy', 'styles'],
     'elements',
-    ['jshint', 'images', 'fonts', 'html'],
+     //  ['jshint', 'images', 'fonts', 'html'],
+    ['images', 'fonts', 'html'],      
     'vulcanize',
     cb);
     // Note: add , 'precache' , after 'vulcanize', if your are going to use Service Worker

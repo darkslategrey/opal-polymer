@@ -1,0 +1,61 @@
+!!!
+/
+  @license
+  Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+  This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+  The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+  The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+  Code distributed by Google as part of the polymer project is also
+  subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+%html{:lang => ""}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "Polymer Starter Kit", :name => "generator"}/
+    %title Polymer Starter Kit
+    / Place favicon.ico in the `app/` directory
+    / Chrome for Android theme color
+    %meta{:content => "#303F9F", :name => "theme-color"}/
+    / Web Application Manifest
+    %link{:href => "manifest.json", :rel => "manifest"}/
+    / Tile color for Win8
+    %meta{:content => "#3372DF", :name => "msapplication-TileColor"}/
+    / Add to homescreen for Chrome on Android
+    %meta{:content => "yes", :name => "mobile-web-app-capable"}/
+    %meta{:content => "PSK", :name => "application-name"}/
+    %link{:href => "images/touch/chrome-touch-icon-192x192.png", :rel => "icon", :sizes => "192x192"}/
+    / Add to homescreen for Safari on iOS
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+    %meta{:content => "black", :name => "apple-mobile-web-app-status-bar-style"}/
+    %meta{:content => "Polymer Starter Kit", :name => "apple-mobile-web-app-title"}/
+    %link{:href => "images/touch/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    / Tile icon for Win8 (144x144)
+    %meta{:content => "images/touch/ms-touch-icon-144x144-precomposed.png", :name => "msapplication-TileImage"}/
+    / build:css styles/main.css
+    %link{:href => "styles/main.css", :rel => "stylesheet"}/
+    / endbuild
+    / build:js bower_components/webcomponentsjs/webcomponents-lite.min.js
+    / <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    %script{:src => "bower_components/jquery/dist/jquery.js"}
+    / <script src="bower_components/zepto/zepto.js"></script>
+    %script{:src => "bower_components/codemirror/lib/codemirror.js"}
+    / <script src="http://cdn.opalrb.org/opal/0.8.0/opal.js"></script>
+    / endbuild
+    / will be replaced with elements/elements.vulcanized.html
+    %link{:href => "elements/elements.html", :rel => "import"}/
+    / endreplace
+  %body.fullbleed.layout.vertical{:unresolved => ""}
+    %span#browser-sync-binding
+    hello ca va
+    / build:js scripts/app.js
+    %script{:src => "//cdn.opalrb.org/opal/current/opal.min.js"}
+    %script{:src => "//cdn.opalrb.org/opal/0.8.0/external/opal-jquery-0.4.0.js"}
+    %script{:src => "//cdn.opalrb.org/opal/current/opal-parser.min.js"}
+    %script{:src => "//cdn.opalrb.org/opal/0.8.0/external/opal-browser-0.2.0.js"}
+    / <script src="scripts/opal.js"></script>
+    %script{:src => "scripts/main.js"}
+    / <script src="scripts/app.js"></script>
+    / <script src="scripts/interpreter.js"></script>
+    / endbuild
