@@ -1,0 +1,26 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    hike (1.2.3)
+    opal (0.8.0)
+      hike (~> 1.2)
+      sourcemap (~> 0.1.0)
+      sprockets (~> 3.1)
+      tilt (>= 1.4)
+    opal-jquery (0.4.0)
+      opal (>= 0.7.0, < 0.9.0)
+    rack (1.6.4)
+    sourcemap (0.1.1)
+    sprockets (3.3.0)
+      rack (~> 1.0)
+    tilt (2.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  opal
+  opal-jquery
+
+BUNDLED WITH
+   1.10.5
